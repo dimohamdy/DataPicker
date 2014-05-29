@@ -7,7 +7,7 @@
 //
 
 #import "DMViewController.h"
-
+#import "DMMultiDataPickerView.h"
 @interface DMViewController ()
 
 @end
@@ -18,6 +18,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSDictionary *d = @{
+                        @"feild1": @[@"1" ,@"1" ,@"1" ,@"1" ,@"1",@"1" ,@"1"],
+                        @"feild2": @[@"2" ,@"2" ,@"2" ,@"2" ,@"2",@"2" ,@"2"],
+                        @"feild3": @[@"3" ,@"3" ,@"3" ,@"3" ,@"3",@"3" ,@"3"]
+                        };
+    DMMultiDataPickerView*objDMMultiDataPickerView=[[DMMultiDataPickerView alloc]initWithNumberOfPicker:3 andWithDictionary:d];
+    [self.view addSubview:objDMMultiDataPickerView];
+
+    
 }
 
 - (void)didReceiveMemoryWarning

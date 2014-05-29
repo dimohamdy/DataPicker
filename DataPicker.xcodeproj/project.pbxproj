@@ -22,6 +22,8 @@
 		FEA50B8619371DEC00357400 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA50B6519371DEC00357400 /* UIKit.framework */; };
 		FEA50B8E19371DEC00357400 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEA50B8C19371DEC00357400 /* InfoPlist.strings */; };
 		FEA50B9019371DEC00357400 /* DataPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA50B8F19371DEC00357400 /* DataPickerTests.m */; };
+		FEA50B9A19371E7700357400 /* DMMultiDataPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA50B9919371E7700357400 /* DMMultiDataPickerView.xib */; };
+		FEA50B9D19371E9E00357400 /* DMMultiDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA50B9C19371E9E00357400 /* DMMultiDataPickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		FEA50B8B19371DEC00357400 /* DataPickerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DataPickerTests-Info.plist"; sourceTree = "<group>"; };
 		FEA50B8D19371DEC00357400 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FEA50B8F19371DEC00357400 /* DataPickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataPickerTests.m; sourceTree = "<group>"; };
+		FEA50B9919371E7700357400 /* DMMultiDataPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMMultiDataPickerView.xib; sourceTree = "<group>"; };
+		FEA50B9B19371E9E00357400 /* DMMultiDataPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMultiDataPickerView.h; sourceTree = "<group>"; };
+		FEA50B9C19371E9E00357400 /* DMMultiDataPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMultiDataPickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,9 @@
 				FEA50B7019371DEC00357400 /* DMAppDelegate.h */,
 				FEA50B7119371DEC00357400 /* DMAppDelegate.m */,
 				FEA50B7319371DEC00357400 /* Main_iPhone.storyboard */,
+				FEA50B9919371E7700357400 /* DMMultiDataPickerView.xib */,
+				FEA50B9B19371E9E00357400 /* DMMultiDataPickerView.h */,
+				FEA50B9C19371E9E00357400 /* DMMultiDataPickerView.m */,
 				FEA50B7619371DEC00357400 /* Main_iPad.storyboard */,
 				FEA50B7919371DEC00357400 /* DMViewController.h */,
 				FEA50B7A19371DEC00357400 /* DMViewController.m */,
@@ -234,6 +242,7 @@
 			files = (
 				FEA50B7819371DEC00357400 /* Main_iPad.storyboard in Resources */,
 				FEA50B7D19371DEC00357400 /* Images.xcassets in Resources */,
+				FEA50B9A19371E7700357400 /* DMMultiDataPickerView.xib in Resources */,
 				FEA50B7519371DEC00357400 /* Main_iPhone.storyboard in Resources */,
 				FEA50B6C19371DEC00357400 /* InfoPlist.strings in Resources */,
 			);
@@ -255,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEA50B6E19371DEC00357400 /* main.m in Sources */,
+				FEA50B9D19371E9E00357400 /* DMMultiDataPickerView.m in Sources */,
 				FEA50B7B19371DEC00357400 /* DMViewController.m in Sources */,
 				FEA50B7219371DEC00357400 /* DMAppDelegate.m in Sources */,
 			);
