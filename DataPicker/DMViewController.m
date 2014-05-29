@@ -7,7 +7,7 @@
 //
 
 #import "DMViewController.h"
-#import "DMMultiDataPickerView.h"
+#import "DMDataPickerCell.h"
 #import "ApplicationStyle.h"
 @interface DMViewController ()
 
@@ -31,7 +31,7 @@
     
 
     
-    DMMultiDataPickerView*objDMMultiDataPickerView=[[DMMultiDataPickerView alloc]initWithWithDictionary:d];
+    DMDataPickerCell*objDMMultiDataPickerView=[[DMDataPickerCell alloc]initWithWithDictionary:d];
     
     [objDMMultiDataPickerView setStylePickerWithLableFontSize:35 andWithLableFontName:@"Arial" andWithLableColor:UIColorFromRGB(0x111111) andWithLableNumberOfLines:0 andWithPickerBackGroundColor:UIColorFromRGB(0xf5f5f5)andWithPickerTintColor:UIColorFromRGB(0x157DEC)  andWithViewHeight:30 ];
     [self.view addSubview:objDMMultiDataPickerView];

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Ahmed Hamdy. All rights reserved.
 //
 
-#import "DMMultiDataPickerView.h"
+#import "DMDataPickerCell.h"
 #import "ApplicationStyle.h"
-@implementation DMMultiDataPickerView{
+@implementation DMDataPickerCell{
     int count;
     NSDictionary *dictionary;
     NSMutableArray*pickers;
@@ -66,7 +66,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        NSArray* nibViews = [[NSBundle mainBundle] loadNibNamed:@"DMMultiDataPickerView"
+        NSArray* nibViews = [[NSBundle mainBundle] loadNibNamed:@"DMDataPickerCell"
                                                           owner:self
                                                         options:nil];
         self = [ nibViews objectAtIndex: 0];
@@ -109,12 +109,12 @@
 //    return value;//or nil, depending how protective you are
 //}
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    NSString*key=[[dictionary allKeys] objectAtIndex:pickerView.tag];
-    NSArray*arrOfFeild=[dictionary objectForKey:key];
-    NSMutableArray*objects=[[NSMutableArray alloc]init];
-    
+
+    NSMutableArray* objects=[[NSMutableArray alloc]init];
     for (UIPickerView*pick in pickers) {
-          //[repeatPickerData objectAtIndex:row];
+        NSString*key=[[dictionary allKeys] objectAtIndex:pick.tag];
+        NSArray*arrOfFeild=[dictionary objectForKey:key];
+       row = [pick selectedRowInComponent:0];
         [objects addObject:[arrOfFeild objectAtIndex:row]];
     }
     NSDictionary*dic=[NSDictionary dictionaryWithObjects:objects forKeys:[dictionary allKeys]];
