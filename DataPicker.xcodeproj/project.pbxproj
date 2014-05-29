@@ -24,6 +24,7 @@
 		FEA50B9019371DEC00357400 /* DataPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA50B8F19371DEC00357400 /* DataPickerTests.m */; };
 		FEA50B9A19371E7700357400 /* DMMultiDataPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA50B9919371E7700357400 /* DMMultiDataPickerView.xib */; };
 		FEA50B9D19371E9E00357400 /* DMMultiDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA50B9C19371E9E00357400 /* DMMultiDataPickerView.m */; };
+		FEA50BA41937454000357400 /* ApplicationStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA50BA31937454000357400 /* ApplicationStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		FEA50B9919371E7700357400 /* DMMultiDataPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMMultiDataPickerView.xib; sourceTree = "<group>"; };
 		FEA50B9B19371E9E00357400 /* DMMultiDataPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMultiDataPickerView.h; sourceTree = "<group>"; };
 		FEA50B9C19371E9E00357400 /* DMMultiDataPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMultiDataPickerView.m; sourceTree = "<group>"; };
+		FEA50BA21937454000357400 /* ApplicationStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationStyle.h; sourceTree = "<group>"; };
+		FEA50BA31937454000357400 /* ApplicationStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationStyle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 		FEA50B6719371DEC00357400 /* DataPicker */ = {
 			isa = PBXGroup;
 			children = (
+				FEA50BA21937454000357400 /* ApplicationStyle.h */,
+				FEA50BA31937454000357400 /* ApplicationStyle.m */,
 				FEA50B7019371DEC00357400 /* DMAppDelegate.h */,
 				FEA50B7119371DEC00357400 /* DMAppDelegate.m */,
 				FEA50B7319371DEC00357400 /* Main_iPhone.storyboard */,
@@ -263,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA50BA41937454000357400 /* ApplicationStyle.m in Sources */,
 				FEA50B6E19371DEC00357400 /* main.m in Sources */,
 				FEA50B9D19371E9E00357400 /* DMMultiDataPickerView.m in Sources */,
 				FEA50B7B19371DEC00357400 /* DMViewController.m in Sources */,
@@ -481,6 +487,7 @@
 				FEA50B9519371DEC00357400 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEA50B9619371DEC00357400 /* Build configuration list for PBXNativeTarget "DataPickerTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +496,7 @@
 				FEA50B9819371DEC00357400 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

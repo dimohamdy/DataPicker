@@ -7,16 +7,33 @@
 //
 
 #import "DMMultiDataPickerView.h"
-
+#import "ApplicationStyle.h"
 @implementation DMMultiDataPickerView{
     int count;
     NSDictionary *dictionary;
+    NSMutableArray*pickers;
+    UILabel*sharedLabel;
+    
+    int ftsize;
+    NSString*ftName;
+    UIColor *lblClr;
+    int lnes;
+    
+    UIColor *bgClr;
+    UIColor *tintClr;
+    int high;
+    
 }
 - (id)initWithWithDictionary:(NSDictionary*)dic
 {
-    self = [super init];
-    dictionary=[NSDictionary dictionaryWithDictionary:dic];
 
+    
+    self = [super init];
+    
+    
+    
+    dictionary=[NSDictionary dictionaryWithDictionary:dic];
+    pickers=[[NSMutableArray alloc]init];
     if (self) {
 
         // Initialization code
@@ -33,8 +50,11 @@
             //generate number of dataPickers
             UIPickerView *datePicker = [[UIPickerView alloc] initWithFrame:CGRectMake((count*dataPickerWidth), 0, dataPickerWidth, dataPickerHeight)] ;
             datePicker.tag = count;
+            //setstyle for picker
+            datePicker=[self setStyleForPicker:datePicker];
             [self addSubview:datePicker];
             [datePicker setDelegate:self];
+            [pickers addObject:datePicker];
         }
         
     }
@@ -72,9 +92,6 @@
     return 1;// or the number of vertical "columns" the picker will show...
 }
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-//    if (myLoadedArray!=nil) {
-//        return [myLoadedArray count];//this will tell the picker how many rows it has - in this case, the size of your loaded array...
-//    }
 
     NSString*key=[[dictionary allKeys] objectAtIndex:pickerView.tag];
     NSArray*arrOfFeild=[dictionary objectForKey:key];
@@ -83,21 +100,72 @@
     return [arrOfFeild count];
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    //you can also write code here to descide what data to return depending on the component ("column")
-NSString*key=[[dictionary allKeys] objectAtIndex:pickerView.tag];
-NSArray*arrOfFeild=[dictionary objectForKey:key];
-    
-    NSString*value=[arrOfFeild objectAtIndex:row];
-    return value;//or nil, depending how protective you are
-}
+//- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+//    //you can also write code here to descide what data to return depending on the component ("column")
+//NSString*key=[[dictionary allKeys] objectAtIndex:pickerView.tag];
+//NSArray*arrOfFeild=[dictionary objectForKey:key];
+//    
+//    NSString*value=[arrOfFeild objectAtIndex:row];
+//    return value;//or nil, depending how protective you are
+//}
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    NSString*key=[[dictionary allKeys] objectAtIndex:pickerView.tag];
+    NSArray*arrOfFeild=[dictionary objectForKey:key];
+    NSMutableArray*objects=[[NSMutableArray alloc]init];
+    
+    for (UIPickerView*pick in pickers) {
+          //[repeatPickerData objectAtIndex:row];
+        [objects addObject:[arrOfFeild objectAtIndex:row]];
+    }
+    NSDictionary*dic=[NSDictionary dictionaryWithObjects:objects forKeys:[dictionary allKeys]];
+    NSLog(@"%@",dic);
+
+}
+-(UIPickerView*)setStyleForPicker:(UIPickerView*)pick{
+    pick.backgroundColor=bgClr;
+    pick.tintColor=tintClr;
+    return pick;
+    
+}
+-(UILabel*)setStyleForLable:(UILabel*)lbl{
+    
+    [lbl setFont:[UIFont fontWithName:ftName size:ftsize]];
+    [lbl setTextColor:lblClr];
+    [lbl setNumberOfLines:lnes];
+    return lbl;
+
+}
+-(void)setStylePickerWithLableFontSize:(int)fontsize andWithLableFontName:(NSString*)fontName andWithLableColor:(UIColor*)lblColor andWithLableNumberOfLines:(int)lines andWithPickerBackGroundColor:(UIColor*)bgColor andWithPickerTintColor:(UIColor*)tint  andWithViewHeight:(int)height{
+     ftsize=fontsize;
+     ftName=fontName;
+     lblClr=lblColor;
+     lnes=lines;
+     bgClr=bgColor;
+     tintClr=tint;
+     high=height;
+    
+}
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    UILabel* tView = (UILabel*)view;
+    if (!tView){
+        tView = [[UILabel alloc] init];
+        // Setup label properties - frame, font, colors etc
+        tView.textAlignment = NSTextAlignmentCenter;
+
+      tView=  [self setStyleForLable:tView];
+    
+    }
+    // Fill the label text here
     NSString*key=[[dictionary allKeys] objectAtIndex:pickerView.tag];
     NSArray*arrOfFeild=[dictionary objectForKey:key];
     
     NSString*value=[arrOfFeild objectAtIndex:row];
-    NSLog(@"%@",value);
-
+     tView.text=value;
+    return tView;
 }
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
+    return high;
+}
+
 
 @end

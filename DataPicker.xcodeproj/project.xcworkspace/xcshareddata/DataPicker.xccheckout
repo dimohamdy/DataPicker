@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>76684B65-A8CA-448B-A3F7-5843825CB5F6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DataPicker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9073EBC0-1225-4E14-B81C-BEF90552BC99</key>
+		<string>https://github.com/dimohamdy/DataPicker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DataPicker.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9073EBC0-1225-4E14-B81C-BEF90552BC99</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dimohamdy/DataPicker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9073EBC0-1225-4E14-B81C-BEF90552BC99</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9073EBC0-1225-4E14-B81C-BEF90552BC99</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DataPicker</string>
+		</dict>
+	</array>
+</dict>
+</plist>
