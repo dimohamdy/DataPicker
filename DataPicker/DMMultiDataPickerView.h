@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DMMultiDataPickerView : UIView<UIPickerViewDelegate>
-- (id)initWithNumberOfPicker:(int)numb andWithDictionary:(NSDictionary*)dic;
+- (id)initWithWithDictionary:(NSDictionary*)dic;
 
 @end

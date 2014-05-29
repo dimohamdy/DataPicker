@@ -18,12 +18,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+//    NSDictionary *d = @{
+//                        @"feild1": @[@"الاول" ,@"الثاني" ,@"1" ,@"الثاني" ,@"الثاني",@"1" ,@"1"],
+//                        @"feild2": @[@"الاول" ,@"الثاني" ,@"1" ,@"الثاني" ,@"الثاني",@"25" ,@"1"]
+//                        };
     NSDictionary *d = @{
                         @"feild1": @[@"1" ,@"1" ,@"1" ,@"1" ,@"1",@"1" ,@"1"],
                         @"feild2": @[@"2" ,@"2" ,@"2" ,@"2" ,@"2",@"2" ,@"2"],
                         @"feild3": @[@"3" ,@"3" ,@"3" ,@"3" ,@"3",@"3" ,@"3"]
                         };
-    DMMultiDataPickerView*objDMMultiDataPickerView=[[DMMultiDataPickerView alloc]initWithNumberOfPicker:3 andWithDictionary:d];
+    DMMultiDataPickerView*objDMMultiDataPickerView=[[DMMultiDataPickerView alloc]initWithWithDictionary:d];
     [self.view addSubview:objDMMultiDataPickerView];
 
     
